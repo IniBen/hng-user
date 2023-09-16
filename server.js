@@ -5,7 +5,9 @@ const bodyParser = require("body-parser");
 const router = require("./routes/users/user.js");
 const cors = require("cors");
 const crypto = require('crypto');
-const port = 3333;
+require('dotenv').config();
+
+const port = process.env.PORT || 3000;
 const corport = 3000;
 
 const app = express();
@@ -20,8 +22,7 @@ app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const dbURI =
-  "mongodb+srv://nodeapi:0gzyAYdNjDIvwewo@cluster0.for6rou.mongodb.net/nodeapi?retryWrites=true&w=majority";
+const dbURI = process.env.MONGODB_URI
 
 // app.locals.encryptionKey = crypto.randomBytes(32);
 

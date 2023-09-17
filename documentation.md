@@ -31,13 +31,14 @@ npm run test
 | field      | data_type     | constraints      |
 | ---------  | ------------- | ---------------- |
 | name       | string        | required         |
+| email      | string        |                  |
+
 
 
 ## Usage
 
 ### Base URL
 
-- https://hngcrudblogapi.cyclic.app
 
 ### Creating a user
 
@@ -48,9 +49,7 @@ npm run test
 
 ```json
 {
-    "username": "dream",
-   "email": "dream@email.com",
-   "password": "12345678"
+    "name": "dream",
 }
 ```
 
@@ -61,8 +60,6 @@ npm run test
   "message": "User added successfully",
   "response": {
     "username": "dream",
-    "email": "eragd",
-    "password": "$2b$07$SLA8K8wuDG8SNypB4yfhxeiYQy1BlypcHJrPT..23rE0fK66fJIOe",
     "onBoard": {
       "createdAccount": false,
       "hasRegistered": false,
